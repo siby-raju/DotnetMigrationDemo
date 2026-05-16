@@ -1,17 +1,15 @@
-trigger:
-- none
+trigger: none
 
 pr:
   branches:
     include:
     - main
-  drafts: false
 
 pool:
   vmImage: 'windows-latest'
 
 variables:
-  solution: '**/*.sln'
+  solution: '*.sln'
   buildPlatform: 'Any CPU'
   buildConfiguration: 'Release'
 
@@ -25,8 +23,8 @@ steps:
       Get-Location
       Write-Host "`n=== All Files in Root ==="
       Get-ChildItem | Select-Object Name
-      Write-Host "`n=== Searching for .sln Files ==="
-      $slnFiles = Get-ChildItem -Recurse -Filter *.sln
+      Write-Host "`n=== Looking for .sln Files ==="
+      $slnFiles = Get-ChildItem -Filter *.sln
       if ($slnFiles) {
         Write-Host "Found .sln files:"
         $slnFiles | Select-Object FullName
@@ -72,4 +70,3 @@ steps:
     searchFolder: '$(Build.ArtifactStagingDirectory)'
     codeCoverageEnabled: true
     platform: '$(buildPlatform)'
-    
