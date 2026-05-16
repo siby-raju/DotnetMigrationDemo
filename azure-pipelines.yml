@@ -5,7 +5,6 @@ pr:
     include:
     - main
 
-  
 pool:
   vmImage: 'windows-latest'
 
