@@ -11,21 +11,21 @@ pool:
   vmImage: 'windows-latest'
 
 variables:
-  solution: '**/*.sln'
-  buildPlatform: 'x86'
+  solution: '*/*.sln'
+  buildPlatform: 'Any CPU'
   buildConfiguration: 'Release'
 
 steps:
 - task: PowerShell@2
-  displayName: 'Install .NET 8.0 SDK x86'
+  displayName: 'Install .NET 8.0 SDK'
   inputs:
     targetType: 'inline'
     script: |
       [Net.ServicePointManager]::SecurityProtocol = [Net.SecurityProtocolType]::Tls12
       Invoke-WebRequest -Uri "https://dot.net/v1/dotnet-install.ps1" -OutFile "$env:TEMP\dotnet-install.ps1"
-      Write-Host "Installing .NET 8.0 SDK x86..."
-      & "$env:TEMP\dotnet-install.ps1" -Channel 8.0 -Architecture x86 -InstallDir "${env:ProgramFiles(x86)}\dotnet" -Runtime dotnet -Verbose
-      Write-Host ".NET 8.0 SDK x86 installed successfully"
+      Write-Host "Installing .NET 8.0 SDK..."
+      & "$env:TEMP\dotnet-install.ps1" -Channel 8.0 -Architecture x64 -InstallDir "$env:ProgramFiles\dotnet" -Runtime dotnet
+      Write-Host ".NET 8.0 SDK installed successfully"
 
 - task: NuGetToolInstaller@1
 
