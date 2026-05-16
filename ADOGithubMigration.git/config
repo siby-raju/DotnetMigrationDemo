@@ -1,0 +1,13 @@
+[core]
+	repositoryformatversion = 0
+	filemode = false
+	bare = true
+	ignorecase = true
+[remote "origin"]
+	url = https://github.com/siby-raju/ADOGithubMigration.git
+	tagOpt = --no-tags
+	fetch = +refs/*:refs/*
+	mirror = true
+[remote "github"]
+	url = https://github.com/siby-raju/DotnetMigrationDemo.git
+	fetch = +refs/heads/*:refs/remotes/github/*
