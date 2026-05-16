@@ -13,7 +13,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("DotnetMigrationDemo.Api")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Release")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+dcc26b4e845aea8137f5a2824628610b506013cd")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+246aa007f6d1b60a435f88964bab54f362c7c500")]
 [assembly: System.Reflection.AssemblyProductAttribute("DotnetMigrationDemo.Api")]
 [assembly: System.Reflection.AssemblyTitleAttribute("DotnetMigrationDemo.Api")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]
