@@ -1,0 +1,16 @@
+C:\Users\joyan\dotnet-ado-to-github-migration\src\DotnetMigrationDemo.Services\bin\Release\net8.0\DotnetMigrationDemo.Services.deps.json
+C:\Users\joyan\dotnet-ado-to-github-migration\src\DotnetMigrationDemo.Services\bin\Release\net8.0\DotnetMigrationDemo.Services.dll
+C:\Users\joyan\dotnet-ado-to-github-migration\src\DotnetMigrationDemo.Services\bin\Release\net8.0\DotnetMigrationDemo.Services.pdb
+C:\Users\joyan\dotnet-ado-to-github-migration\src\DotnetMigrationDemo.Services\bin\Release\net8.0\DotnetMigrationDemo.Core.dll
+C:\Users\joyan\dotnet-ado-to-github-migration\src\DotnetMigrationDemo.Services\bin\Release\net8.0\DotnetMigrationDemo.Core.pdb
+C:\Users\joyan\dotnet-ado-to-github-migration\src\DotnetMigrationDemo.Services\obj\Release\net8.0\DotnetMigrationDemo.Services.csproj.AssemblyReference.cache
+C:\Users\joyan\dotnet-ado-to-github-migration\src\DotnetMigrationDemo.Services\obj\Release\net8.0\DotnetMigrationDemo.Services.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\joyan\dotnet-ado-to-github-migration\src\DotnetMigrationDemo.Services\obj\Release\net8.0\DotnetMigrationDemo.Services.AssemblyInfoInputs.cache
+C:\Users\joyan\dotnet-ado-to-github-migration\src\DotnetMigrationDemo.Services\obj\Release\net8.0\DotnetMigrationDemo.Services.AssemblyInfo.cs
+C:\Users\joyan\dotnet-ado-to-github-migration\src\DotnetMigrationDemo.Services\obj\Release\net8.0\DotnetMigrationDemo.Services.csproj.CoreCompileInputs.cache
+C:\Users\joyan\dotnet-ado-to-github-migration\src\DotnetMigrationDemo.Services\obj\Release\net8.0\DotnetMigrationDemo.Services.sourcelink.json
+C:\Users\joyan\dotnet-ado-to-github-migration\src\DotnetMigrationDemo.Services\obj\Release\net8.0\DotnetMi.04114DD2.Up2Date
+C:\Users\joyan\dotnet-ado-to-github-migration\src\DotnetMigrationDemo.Services\obj\Release\net8.0\DotnetMigrationDemo.Services.dll
+C:\Users\joyan\dotnet-ado-to-github-migration\src\DotnetMigrationDemo.Services\obj\Release\net8.0\refint\DotnetMigrationDemo.Services.dll
+C:\Users\joyan\dotnet-ado-to-github-migration\src\DotnetMigrationDemo.Services\obj\Release\net8.0\DotnetMigrationDemo.Services.pdb
+C:\Users\joyan\dotnet-ado-to-github-migration\src\DotnetMigrationDemo.Services\obj\Release\net8.0\ref\DotnetMigrationDemo.Services.dll
