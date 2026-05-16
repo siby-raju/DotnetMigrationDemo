@@ -3,7 +3,6 @@
 > Case Study: Cyncly | Siby Raju - Platform Engineer (Azure DevOps)
 
 ## Overview
-
 This project demonstrates migration from Azure Pipelines to GitHub Actions for a .NET 8 solution.
 
 ## Requirements Met
