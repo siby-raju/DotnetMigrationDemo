@@ -13,5 +13,4 @@ Create .NET 8 solution for testing
 Run on generally available hosted runner (`ubuntu-latest`)  
 Extra Credit: Optimized with bash + marketplace actions  
 50% faster build times  
-
 ## Project Structure
