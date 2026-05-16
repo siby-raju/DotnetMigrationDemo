@@ -18,8 +18,9 @@ public class DataServiceTests {
         Assert.All(results, r => Assert.Equal(DataStatus.Completed, r.Status));
     }
     [Fact]
-    public void DataItem_ShouldInitializeWithDefaults() {
-        var item = new DataItem();
-        Assert.Equal(DataStatus.Pending, item.Status);
+    public void DataItem_ShouldInitializeWithDefaults()
+    {
+    var item = new DataItem();
+    Assert.Equal(DataStatus.Pending, item.Status);
     }
 }

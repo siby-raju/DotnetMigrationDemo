@@ -1,5 +1,9 @@
-# Updated: Fixed PR trigger - 2026-05-16
-trigger: none
+trigger:
+  batch: true
+  branches:
+    include:
+    - main
+    - develop
 
 pr:
   branches:
@@ -34,7 +38,6 @@ steps:
         exit 1
       }
 
-
 - task: PowerShell@2
   displayName: 'Install .NET 8.0 SDK'
   inputs:
@@ -43,32 +46,32 @@ steps:
       [Net.ServicePointManager]::SecurityProtocol = [Net.SecurityProtocolType]::Tls12
       Invoke-WebRequest -Uri "https://dot.net/v1/dotnet-install.ps1" -OutFile "$env:TEMP\dotnet-install.ps1"
       Write-Host "Installing .NET 8.0 SDK..."
-      & "$env:TEMP\dotnet-install.ps1" -Channel 8.0 -Architecture x64 -InstallDir "$env:ProgramFiles\dotnet" -Runtime dotnet
+      & "$env:TEMP\dotnet-install.ps1" -Channel 8.0 -Architecture x64 -InstallDir "$env:ProgramFiles\dotnet"
       Write-Host ".NET 8.0 SDK installed successfully"
 
-- task: NuGetToolInstaller@1
-
-- task: NuGetCommand@2
-  displayName: 'Nuget restore'
+- task: DotNetCoreCLI@2
+  displayName: 'Restore'
   inputs:
     command: restore
-    restoreSolution: '$(solution)'
+    projects: '$(solution)'
 
-- task: VSBuild@1
-  displayName: 'Build solution'
+- task: DotNetCoreCLI@2
+  displayName: 'Build'
   inputs:
-    solution: '$(solution)'
-    platform: '$(buildPlatform)'
-    configuration: '$(buildConfiguration)'
+    command: build
+    projects: '$(solution)'
+    arguments: '--configuration $(buildConfiguration)'
 
-- task: VSTest@3
-  displayName: 'Run unit tests'
+- task: DotNetCoreCLI@2
+  displayName: 'Test'
   inputs:
-    testSelector: 'testAssemblies'
-    testAssemblyVer2: |
-      **\*Tests.dll
-      !**\*TestAdapter.dll
-      !**\obj\**
-    searchFolder: '$(Build.ArtifactStagingDirectory)'
-    codeCoverageEnabled: true
-    platform: '$(buildPlatform)'
+    command: test
+    projects: 'tests/DotnetMigrationDemo.Tests/DotnetMigrationDemo.Tests.csproj'
+    arguments: '--configuration $(buildConfiguration) --verbosity normal'
+
+- task: DotNetCoreCLI@2
+  displayName: 'Publish'
+  inputs:
+    command: publish
+    publishWebProjects: true
+    arguments: '--configuration $(buildConfiguration) --output $(build.artifactstagingdirectory)'
