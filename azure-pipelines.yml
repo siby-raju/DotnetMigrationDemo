@@ -72,3 +72,4 @@ steps:
     searchFolder: '$(Build.ArtifactStagingDirectory)'
     codeCoverageEnabled: true
     platform: '$(buildPlatform)'
+    
