@@ -1,0 +1,55 @@
+trigger:
+- none
+
+pr:
+  branches:
+    include:
+    - main
+  drafts: false
+
+pool:
+  vmImage: 'windows-latest'
+
+variables:
+  solution: '**/*.sln'
+  buildPlatform: 'x86'
+  buildConfiguration: 'Release'
+
+steps:
+- task: PowerShell@2
+  displayName: 'Install .NET 8.0 SDK x86'
+  inputs:
+    targetType: 'inline'
+    script: |
+      [Net.ServicePointManager]::SecurityProtocol = [Net.SecurityProtocolType]::Tls12
+      Invoke-WebRequest -Uri "https://dot.net/v1/dotnet-install.ps1" -OutFile "$env:TEMP\dotnet-install.ps1"
+      Write-Host "Installing .NET 8.0 SDK x86..."
+      & "$env:TEMP\dotnet-install.ps1" -Channel 8.0 -Architecture x86 -InstallDir "${env:ProgramFiles(x86)}\dotnet" -Runtime dotnet -Verbose
+      Write-Host ".NET 8.0 SDK x86 installed successfully"
+
+- task: NuGetToolInstaller@1
+
+- task: NuGetCommand@2
+  displayName: 'Nuget restore'
+  inputs:
+    command: restore
+    restoreSolution: '$(solution)'
+
+- task: VSBuild@1
+  displayName: 'Build solution'
+  inputs:
+    solution: '$(solution)'
+    platform: '$(buildPlatform)'
+    configuration: '$(buildConfiguration)'
+
+- task: VSTest@3
+  displayName: 'Run unit tests'
+  inputs:
+    testSelector: 'testAssemblies'
+    testAssemblyVer2: |
+      **\*Tests.dll
+      !**\*TestAdapter.dll
+      !**\obj\**
+    searchFolder: '$(Build.ArtifactStagingDirectory)'
+    codeCoverageEnabled: true
+    platform: '$(buildPlatform)'
