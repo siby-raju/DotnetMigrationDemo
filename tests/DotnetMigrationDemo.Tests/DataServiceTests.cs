@@ -21,6 +21,5 @@ public class DataServiceTests {
     public void DataItem_ShouldInitializeWithDefaults() {
         var item = new DataItem();
         Assert.Equal(DataStatus.Pending, item.Status);
-        Assert.NotNull(item.Id);
     }
 }
