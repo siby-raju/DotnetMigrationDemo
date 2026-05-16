@@ -1,12 +1,16 @@
 trigger:
-- main
+  batch: true
+  branches:
+    include:
+    - main
+    - develop
 
 pr:
   branches:
     include:
     - main
   drafts: false
-
+  
 pool:
   vmImage: 'windows-latest'
 
