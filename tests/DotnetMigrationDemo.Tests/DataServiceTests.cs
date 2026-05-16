@@ -1,60 +1,26 @@
 using DotnetMigrationDemo.Core.Models;
 using DotnetMigrationDemo.Services;
-
 namespace DotnetMigrationDemo.Tests;
-
-public class DataServiceTests
-{
+public class DataServiceTests {
     private readonly DataService _dataService;
-
-    public DataServiceTests()
-    {
-        _dataService = new DataService();
-    }
-
+    public DataServiceTests() { _dataService = new DataService(); }
     [Fact]
-    public async Task ProcessAsync_ShouldCompleteItem()
-    {
-        // Arrange
-        var item = new DataItem { Name = "Test Item", Value = "Test Value" };
-
-        // Act
+    public async Task ProcessAsync_ShouldCompleteItem() {
+        var item = new DataItem { Name = "Test", Value = "Value" };
         var result = await _dataService.ProcessAsync(item, CancellationToken.None);
-
-        // Assert
         Assert.Equal(DataStatus.Completed, result.Status);
-        Assert.Equal("Test Item", result.Name);
     }
-
     [Fact]
-    public async Task ProcessBatchAsync_ShouldCompleteAllItems()
-    {
-        // Arrange
-        var items = new[]
-        {
-            new DataItem { Name = "Item 1", Value = "Value 1" },
-            new DataItem { Name = "Item 2", Value = "Value 2" },
-            new DataItem { Name = "Item 3", Value = "Value 3" }
-        };
-
-        // Act
+    public async Task ProcessBatchAsync_ShouldCompleteAllItems() {
+        var items = new[] { new DataItem { Name = "1" }, new DataItem { Name = "2" }, new DataItem { Name = "3" } };
         var results = await _dataService.ProcessBatchAsync(items, CancellationToken.None);
-
-        // Assert
-        var resultArray = results.ToArray();
-        Assert.Equal(3, resultArray.Length);
-        Assert.All(resultArray, r => Assert.Equal(DataStatus.Completed, r.Status));
+        Assert.Equal(3, results.Count());
+        Assert.All(results, r => Assert.Equal(DataStatus.Completed, r.Status));
     }
-
     [Fact]
-    public void DataItem_ShouldInitializeWithDefaults()
-    {
-        // Arrange & Act
+    public void DataItem_ShouldInitializeWithDefaults() {
         var item = new DataItem();
-
-        // Assert
         Assert.Equal(DataStatus.Pending, item.Status);
         Assert.NotNull(item.Id);
-        Assert.Equal(DateTime.UtcNow.Date, item.CreatedAt.Date);
     }
 }

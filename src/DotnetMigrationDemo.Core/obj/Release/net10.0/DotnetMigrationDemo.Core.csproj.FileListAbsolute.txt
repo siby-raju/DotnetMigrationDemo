@@ -9,3 +9,4 @@ C:\Users\joyan\dotnet-ado-to-github-migration\src\DotnetMigrationDemo.Core\obj\R
 C:\Users\joyan\dotnet-ado-to-github-migration\src\DotnetMigrationDemo.Core\obj\Release\net10.0\refint\DotnetMigrationDemo.Core.dll
 C:\Users\joyan\dotnet-ado-to-github-migration\src\DotnetMigrationDemo.Core\obj\Release\net10.0\DotnetMigrationDemo.Core.pdb
 C:\Users\joyan\dotnet-ado-to-github-migration\src\DotnetMigrationDemo.Core\obj\Release\net10.0\ref\DotnetMigrationDemo.Core.dll
+C:\Users\joyan\dotnet-ado-to-github-migration\src\DotnetMigrationDemo.Core\obj\Release\net10.0\DotnetMigrationDemo.Core.sourcelink.json

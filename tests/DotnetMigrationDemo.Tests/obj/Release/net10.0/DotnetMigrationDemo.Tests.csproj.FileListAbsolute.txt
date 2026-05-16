@@ -25,9 +25,6 @@ C:\Users\joyan\dotnet-ado-to-github-migration\tests\DotnetMigrationDemo.Tests\bi
 C:\Users\joyan\dotnet-ado-to-github-migration\tests\DotnetMigrationDemo.Tests\bin\Release\net10.0\Microsoft.TestPlatform.Utilities.dll
 C:\Users\joyan\dotnet-ado-to-github-migration\tests\DotnetMigrationDemo.Tests\bin\Release\net10.0\Microsoft.VisualStudio.TestPlatform.Common.dll
 C:\Users\joyan\dotnet-ado-to-github-migration\tests\DotnetMigrationDemo.Tests\bin\Release\net10.0\Newtonsoft.Json.dll
-C:\Users\joyan\dotnet-ado-to-github-migration\tests\DotnetMigrationDemo.Tests\bin\Release\net10.0\Swashbuckle.AspNetCore.Swagger.dll
-C:\Users\joyan\dotnet-ado-to-github-migration\tests\DotnetMigrationDemo.Tests\bin\Release\net10.0\Swashbuckle.AspNetCore.SwaggerGen.dll
-C:\Users\joyan\dotnet-ado-to-github-migration\tests\DotnetMigrationDemo.Tests\bin\Release\net10.0\Swashbuckle.AspNetCore.SwaggerUI.dll
 C:\Users\joyan\dotnet-ado-to-github-migration\tests\DotnetMigrationDemo.Tests\bin\Release\net10.0\xunit.assert.dll
 C:\Users\joyan\dotnet-ado-to-github-migration\tests\DotnetMigrationDemo.Tests\bin\Release\net10.0\xunit.core.dll
 C:\Users\joyan\dotnet-ado-to-github-migration\tests\DotnetMigrationDemo.Tests\bin\Release\net10.0\xunit.execution.dotnet.dll
@@ -113,3 +110,4 @@ C:\Users\joyan\dotnet-ado-to-github-migration\tests\DotnetMigrationDemo.Tests\ob
 C:\Users\joyan\dotnet-ado-to-github-migration\tests\DotnetMigrationDemo.Tests\obj\Release\net10.0\DotnetMigrationDemo.Tests.pdb
 C:\Users\joyan\dotnet-ado-to-github-migration\tests\DotnetMigrationDemo.Tests\obj\Release\net10.0\DotnetMigrationDemo.Tests.genruntimeconfig.cache
 C:\Users\joyan\dotnet-ado-to-github-migration\tests\DotnetMigrationDemo.Tests\obj\Release\net10.0\ref\DotnetMigrationDemo.Tests.dll
+C:\Users\joyan\dotnet-ado-to-github-migration\tests\DotnetMigrationDemo.Tests\obj\Release\net10.0\DotnetMigrationDemo.Tests.sourcelink.json

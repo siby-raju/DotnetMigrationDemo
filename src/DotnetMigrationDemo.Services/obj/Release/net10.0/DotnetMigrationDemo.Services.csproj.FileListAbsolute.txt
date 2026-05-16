@@ -13,3 +13,4 @@ C:\Users\joyan\dotnet-ado-to-github-migration\src\DotnetMigrationDemo.Services\o
 C:\Users\joyan\dotnet-ado-to-github-migration\src\DotnetMigrationDemo.Services\obj\Release\net10.0\refint\DotnetMigrationDemo.Services.dll
 C:\Users\joyan\dotnet-ado-to-github-migration\src\DotnetMigrationDemo.Services\obj\Release\net10.0\DotnetMigrationDemo.Services.pdb
 C:\Users\joyan\dotnet-ado-to-github-migration\src\DotnetMigrationDemo.Services\obj\Release\net10.0\ref\DotnetMigrationDemo.Services.dll
+C:\Users\joyan\dotnet-ado-to-github-migration\src\DotnetMigrationDemo.Services\obj\Release\net10.0\DotnetMigrationDemo.Services.sourcelink.json
