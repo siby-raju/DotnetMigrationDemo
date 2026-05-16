@@ -1,0 +1,12 @@
+C:\Users\joyan\dotnet-ado-to-github-migration\src\DotnetMigrationDemo.Core\bin\Release\net10.0\DotnetMigrationDemo.Core.deps.json
+C:\Users\joyan\dotnet-ado-to-github-migration\src\DotnetMigrationDemo.Core\bin\Release\net10.0\DotnetMigrationDemo.Core.dll
+C:\Users\joyan\dotnet-ado-to-github-migration\src\DotnetMigrationDemo.Core\bin\Release\net10.0\DotnetMigrationDemo.Core.pdb
+C:\Users\joyan\dotnet-ado-to-github-migration\src\DotnetMigrationDemo.Core\obj\Release\net10.0\DotnetMigrationDemo.Core.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\joyan\dotnet-ado-to-github-migration\src\DotnetMigrationDemo.Core\obj\Release\net10.0\DotnetMigrationDemo.Core.AssemblyInfoInputs.cache
+C:\Users\joyan\dotnet-ado-to-github-migration\src\DotnetMigrationDemo.Core\obj\Release\net10.0\DotnetMigrationDemo.Core.AssemblyInfo.cs
+C:\Users\joyan\dotnet-ado-to-github-migration\src\DotnetMigrationDemo.Core\obj\Release\net10.0\DotnetMigrationDemo.Core.csproj.CoreCompileInputs.cache
+C:\Users\joyan\dotnet-ado-to-github-migration\src\DotnetMigrationDemo.Core\obj\Release\net10.0\DotnetMigrationDemo.Core.dll
+C:\Users\joyan\dotnet-ado-to-github-migration\src\DotnetMigrationDemo.Core\obj\Release\net10.0\refint\DotnetMigrationDemo.Core.dll
+C:\Users\joyan\dotnet-ado-to-github-migration\src\DotnetMigrationDemo.Core\obj\Release\net10.0\DotnetMigrationDemo.Core.pdb
+C:\Users\joyan\dotnet-ado-to-github-migration\src\DotnetMigrationDemo.Core\obj\Release\net10.0\ref\DotnetMigrationDemo.Core.dll
+C:\Users\joyan\dotnet-ado-to-github-migration\src\DotnetMigrationDemo.Core\obj\Release\net10.0\DotnetMigrationDemo.Core.sourcelink.json

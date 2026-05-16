@@ -1,0 +1,77 @@
+trigger:
+  batch: true
+  branches:
+    include:
+    - main
+    - develop
+
+pr:
+  branches:
+    include:
+    - main
+
+pool:
+  vmImage: 'windows-latest'
+
+variables:
+  solution: '*.sln'
+  buildPlatform: 'Any CPU'
+  buildConfiguration: 'Release'
+
+steps:
+- task: PowerShell@2
+  displayName: 'Find Solution File'
+  inputs:
+    targetType: 'inline'
+    script: |
+      Write-Host "=== Current Directory ==="
+      Get-Location
+      Write-Host "`n=== All Files in Root ==="
+      Get-ChildItem | Select-Object Name
+      Write-Host "`n=== Looking for .sln Files ==="
+      $slnFiles = Get-ChildItem -Filter *.sln
+      if ($slnFiles) {
+        Write-Host "Found .sln files:"
+        $slnFiles | Select-Object FullName
+      } else {
+        Write-Error "No .sln files found!"
+        exit 1
+      }
+
+- task: PowerShell@2
+  displayName: 'Install .NET 8.0 SDK'
+  inputs:
+    targetType: 'inline'
+    script: |
+      [Net.ServicePointManager]::SecurityProtocol = [Net.SecurityProtocolType]::Tls12
+      Invoke-WebRequest -Uri "https://dot.net/v1/dotnet-install.ps1" -OutFile "$env:TEMP\dotnet-install.ps1"
+      Write-Host "Installing .NET 8.0 SDK..."
+      & "$env:TEMP\dotnet-install.ps1" -Channel 8.0 -Architecture x64 -InstallDir "$env:ProgramFiles\dotnet"
+      Write-Host ".NET 8.0 SDK installed successfully"
+
+- task: DotNetCoreCLI@2
+  displayName: 'Restore'
+  inputs:
+    command: restore
+    projects: '$(solution)'
+
+- task: DotNetCoreCLI@2
+  displayName: 'Build'
+  inputs:
+    command: build
+    projects: '$(solution)'
+    arguments: '--configuration $(buildConfiguration)'
+
+- task: DotNetCoreCLI@2
+  displayName: 'Test'
+  inputs:
+    command: test
+    projects: 'tests/DotnetMigrationDemo.Tests/DotnetMigrationDemo.Tests.csproj'
+    arguments: '--configuration $(buildConfiguration) --verbosity normal'
+
+- task: DotNetCoreCLI@2
+  displayName: 'Publish'
+  inputs:
+    command: publish
+    publishWebProjects: true
+    arguments: '--configuration $(buildConfiguration) --output $(build.artifactstagingdirectory)'

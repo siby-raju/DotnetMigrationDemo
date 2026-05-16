@@ -1,0 +1,316 @@
+{
+  "format": 1,
+  "restore": {
+    "C:\\Users\\joyan\\dotnet-ado-to-github-migration\\tests\\DotnetMigrationDemo.Tests\\DotnetMigrationDemo.Tests.csproj": {}
+  },
+  "projects": {
+    "C:\\Users\\joyan\\dotnet-ado-to-github-migration\\src\\DotnetMigrationDemo.Api\\DotnetMigrationDemo.Api.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "C:\\Users\\joyan\\dotnet-ado-to-github-migration\\src\\DotnetMigrationDemo.Api\\DotnetMigrationDemo.Api.csproj",
+        "projectName": "DotnetMigrationDemo.Api",
+        "projectPath": "C:\\Users\\joyan\\dotnet-ado-to-github-migration\\src\\DotnetMigrationDemo.Api\\DotnetMigrationDemo.Api.csproj",
+        "packagesPath": "C:\\Users\\joyan\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\joyan\\dotnet-ado-to-github-migration\\src\\DotnetMigrationDemo.Api\\obj\\",
+        "projectStyle": "PackageReference",
+        "fallbackFolders": [
+          "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
+        ],
+        "configFilePaths": [
+          "C:\\Users\\joyan\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        ],
+        "originalTargetFrameworks": [
+          "net8.0"
+        ],
+        "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "C:\\Program Files\\dotnet\\library-packs": {},
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "net8.0": {
+            "framework": "net8.0",
+            "targetAlias": "net8.0",
+            "projectReferences": {
+              "C:\\Users\\joyan\\dotnet-ado-to-github-migration\\src\\DotnetMigrationDemo.Core\\DotnetMigrationDemo.Core.csproj": {
+                "projectPath": "C:\\Users\\joyan\\dotnet-ado-to-github-migration\\src\\DotnetMigrationDemo.Core\\DotnetMigrationDemo.Core.csproj"
+              },
+              "C:\\Users\\joyan\\dotnet-ado-to-github-migration\\src\\DotnetMigrationDemo.Services\\DotnetMigrationDemo.Services.csproj": {
+                "projectPath": "C:\\Users\\joyan\\dotnet-ado-to-github-migration\\src\\DotnetMigrationDemo.Services\\DotnetMigrationDemo.Services.csproj"
+              }
+            }
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        },
+        "restoreAuditProperties": {
+          "enableAudit": "true",
+          "auditLevel": "low",
+          "auditMode": "direct"
+        },
+        "SdkAnalysisLevel": "10.0.300"
+      },
+      "frameworks": {
+        "net8.0": {
+          "framework": "net8.0",
+          "targetAlias": "net8.0",
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48",
+            "net481"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.AspNetCore.App": {
+              "privateAssets": "none"
+            },
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\10.0.300/PortableRuntimeIdentifierGraph.json"
+        }
+      }
+    },
+    "C:\\Users\\joyan\\dotnet-ado-to-github-migration\\src\\DotnetMigrationDemo.Core\\DotnetMigrationDemo.Core.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "C:\\Users\\joyan\\dotnet-ado-to-github-migration\\src\\DotnetMigrationDemo.Core\\DotnetMigrationDemo.Core.csproj",
+        "projectName": "DotnetMigrationDemo.Core",
+        "projectPath": "C:\\Users\\joyan\\dotnet-ado-to-github-migration\\src\\DotnetMigrationDemo.Core\\DotnetMigrationDemo.Core.csproj",
+        "packagesPath": "C:\\Users\\joyan\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\joyan\\dotnet-ado-to-github-migration\\src\\DotnetMigrationDemo.Core\\obj\\",
+        "projectStyle": "PackageReference",
+        "fallbackFolders": [
+          "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
+        ],
+        "configFilePaths": [
+          "C:\\Users\\joyan\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        ],
+        "originalTargetFrameworks": [
+          "net8.0"
+        ],
+        "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "C:\\Program Files\\dotnet\\library-packs": {},
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "net8.0": {
+            "framework": "net8.0",
+            "targetAlias": "net8.0",
+            "projectReferences": {}
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        },
+        "restoreAuditProperties": {
+          "enableAudit": "true",
+          "auditLevel": "low",
+          "auditMode": "direct"
+        },
+        "SdkAnalysisLevel": "10.0.300"
+      },
+      "frameworks": {
+        "net8.0": {
+          "framework": "net8.0",
+          "targetAlias": "net8.0",
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48",
+            "net481"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\10.0.300/PortableRuntimeIdentifierGraph.json"
+        }
+      }
+    },
+    "C:\\Users\\joyan\\dotnet-ado-to-github-migration\\src\\DotnetMigrationDemo.Services\\DotnetMigrationDemo.Services.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "C:\\Users\\joyan\\dotnet-ado-to-github-migration\\src\\DotnetMigrationDemo.Services\\DotnetMigrationDemo.Services.csproj",
+        "projectName": "DotnetMigrationDemo.Services",
+        "projectPath": "C:\\Users\\joyan\\dotnet-ado-to-github-migration\\src\\DotnetMigrationDemo.Services\\DotnetMigrationDemo.Services.csproj",
+        "packagesPath": "C:\\Users\\joyan\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\joyan\\dotnet-ado-to-github-migration\\src\\DotnetMigrationDemo.Services\\obj\\",
+        "projectStyle": "PackageReference",
+        "fallbackFolders": [
+          "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
+        ],
+        "configFilePaths": [
+          "C:\\Users\\joyan\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        ],
+        "originalTargetFrameworks": [
+          "net8.0"
+        ],
+        "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "C:\\Program Files\\dotnet\\library-packs": {},
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "net8.0": {
+            "framework": "net8.0",
+            "targetAlias": "net8.0",
+            "projectReferences": {
+              "C:\\Users\\joyan\\dotnet-ado-to-github-migration\\src\\DotnetMigrationDemo.Core\\DotnetMigrationDemo.Core.csproj": {
+                "projectPath": "C:\\Users\\joyan\\dotnet-ado-to-github-migration\\src\\DotnetMigrationDemo.Core\\DotnetMigrationDemo.Core.csproj"
+              }
+            }
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        },
+        "restoreAuditProperties": {
+          "enableAudit": "true",
+          "auditLevel": "low",
+          "auditMode": "direct"
+        },
+        "SdkAnalysisLevel": "10.0.300"
+      },
+      "frameworks": {
+        "net8.0": {
+          "framework": "net8.0",
+          "targetAlias": "net8.0",
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48",
+            "net481"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\10.0.300/PortableRuntimeIdentifierGraph.json"
+        }
+      }
+    },
+    "C:\\Users\\joyan\\dotnet-ado-to-github-migration\\tests\\DotnetMigrationDemo.Tests\\DotnetMigrationDemo.Tests.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "C:\\Users\\joyan\\dotnet-ado-to-github-migration\\tests\\DotnetMigrationDemo.Tests\\DotnetMigrationDemo.Tests.csproj",
+        "projectName": "DotnetMigrationDemo.Tests",
+        "projectPath": "C:\\Users\\joyan\\dotnet-ado-to-github-migration\\tests\\DotnetMigrationDemo.Tests\\DotnetMigrationDemo.Tests.csproj",
+        "packagesPath": "C:\\Users\\joyan\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\joyan\\dotnet-ado-to-github-migration\\tests\\DotnetMigrationDemo.Tests\\obj\\",
+        "projectStyle": "PackageReference",
+        "fallbackFolders": [
+          "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
+        ],
+        "configFilePaths": [
+          "C:\\Users\\joyan\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        ],
+        "originalTargetFrameworks": [
+          "net8.0"
+        ],
+        "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "C:\\Program Files\\dotnet\\library-packs": {},
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "net8.0": {
+            "framework": "net8.0",
+            "targetAlias": "net8.0",
+            "projectReferences": {
+              "C:\\Users\\joyan\\dotnet-ado-to-github-migration\\src\\DotnetMigrationDemo.Api\\DotnetMigrationDemo.Api.csproj": {
+                "projectPath": "C:\\Users\\joyan\\dotnet-ado-to-github-migration\\src\\DotnetMigrationDemo.Api\\DotnetMigrationDemo.Api.csproj"
+              }
+            }
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        },
+        "restoreAuditProperties": {
+          "enableAudit": "true",
+          "auditLevel": "low",
+          "auditMode": "direct"
+        },
+        "SdkAnalysisLevel": "10.0.300"
+      },
+      "frameworks": {
+        "net8.0": {
+          "framework": "net8.0",
+          "targetAlias": "net8.0",
+          "dependencies": {
+            "Microsoft.NET.Test.Sdk": {
+              "target": "Package",
+              "version": "[17.14.1, )"
+            },
+            "coverlet.collector": {
+              "target": "Package",
+              "version": "[6.0.4, )"
+            },
+            "xunit": {
+              "target": "Package",
+              "version": "[2.9.3, )"
+            },
+            "xunit.runner.visualstudio": {
+              "target": "Package",
+              "version": "[3.1.4, )"
+            }
+          },
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48",
+            "net481"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\10.0.300/PortableRuntimeIdentifierGraph.json"
+        }
+      }
+    }
+  }
+}
