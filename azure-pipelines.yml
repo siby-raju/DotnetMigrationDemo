@@ -1,72 +1,31 @@
-trigger: none
+trigger:
+  branches:
+    include:
+      - master
 
 pr:
   branches:
     include:
-    - main
+      - master
 
 pool:
-  vmImage: 'windows-latest'
+  vmImage: 'ubuntu-latest'
 
 variables:
-  solution: '*.sln'
-  buildPlatform: 'Any CPU'
   buildConfiguration: 'Release'
 
 steps:
-- task: PowerShell@2
-  displayName: 'Find Solution File'
-  inputs:
-    targetType: 'inline'
-    script: |
-      Write-Host "=== Current Directory ==="
-      Get-Location
-      Write-Host "`n=== All Files in Root ==="
-      Get-ChildItem | Select-Object Name
-      Write-Host "`n=== Looking for .sln Files ==="
-      $slnFiles = Get-ChildItem -Filter *.sln
-      if ($slnFiles) {
-        Write-Host "Found .sln files:"
-        $slnFiles | Select-Object FullName
-      } else {
-        Write-Error "No .sln files found!"
-        exit 1
-      }
 
-- task: PowerShell@2
-  displayName: 'Install .NET 8.0 SDK'
+- task: UseDotNet@2
   inputs:
-    targetType: 'inline'
-    script: |
-      [Net.ServicePointManager]::SecurityProtocol = [Net.SecurityProtocolType]::Tls12
-      Invoke-WebRequest -Uri "https://dot.net/v1/dotnet-install.ps1" -OutFile "$env:TEMP\dotnet-install.ps1"
-      Write-Host "Installing .NET 8.0 SDK..."
-      & "$env:TEMP\dotnet-install.ps1" -Channel 8.0 -Architecture x64 -InstallDir "$env:ProgramFiles\dotnet" -Runtime dotnet
-      Write-Host ".NET 8.0 SDK installed successfully"
+    packageType: 'sdk'
+    version: '8.x'
 
-- task: NuGetToolInstaller@1
+- script: dotnet restore
+  displayName: 'Restore'
 
-- task: NuGetCommand@2
-  displayName: 'Nuget restore'
-  inputs:
-    command: restore
-    restoreSolution: '$(solution)'
+- script: dotnet build --configuration $(buildConfiguration) --no-restore
+  displayName: 'Build'
 
-- task: VSBuild@1
-  displayName: 'Build solution'
-  inputs:
-    solution: '$(solution)'
-    platform: '$(buildPlatform)'
-    configuration: '$(buildConfiguration)'
-
-- task: VSTest@3
-  displayName: 'Run unit tests'
-  inputs:
-    testSelector: 'testAssemblies'
-    testAssemblyVer2: |
-      **\*Tests.dll
-      !**\*TestAdapter.dll
-      !**\obj\**
-    searchFolder: '$(Build.ArtifactStagingDirectory)'
-    codeCoverageEnabled: true
-    platform: '$(buildPlatform)'
+- script: dotnet test --configuration $(buildConfiguration) --no-build
+  displayName: 'Test'
