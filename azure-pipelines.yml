@@ -35,6 +35,7 @@ steps:
         exit 1
       }
 
+
 - task: PowerShell@2
   displayName: 'Install .NET 8.0 SDK'
   inputs:
